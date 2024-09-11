@@ -1,14 +1,13 @@
 ---
--name: Playbook to test handlers
+- name: Playbook to test handlers
   hosts: all
   become: yes
   roles:
-    handlers
+    - handlers
 
 
-handlers:
-  -name: Restart NGINX
-   service:
-     name: nginx
-     state: restarted
-     
+  handlers:
+    - name: Restart NGINX
+      service:
+        name: nginx
+        state: restarted

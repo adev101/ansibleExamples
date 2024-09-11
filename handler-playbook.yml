@@ -7,6 +7,8 @@
 
 
 handlers:
-  -name: Print success message
-   shell: echo "Handler notified"
+  -name: Restart NGINX
+   service:
+     name: nginx
+     state: restarted
      
